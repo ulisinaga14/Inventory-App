@@ -1,0 +1,1 @@
+<h1> Halo <?php echo $_GET['coba'];?> </h1>

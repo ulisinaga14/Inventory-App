@@ -1,0 +1,50 @@
+Cara mengintal yii ke dalam laptop , 
+1. Download folder zip yii 1
+2. extract filenya pada folder xampp/htdocs lalu ganti nama folder nya menjadi yii
+3. lakukan instalasi melalui cmd dengan masuk ke folder xampp, misal folder xampp ada pada penyimpanan C,
+ubah direktori ke c dengan cd : c\
+lalu masuk ke folder yang akan digunakan untuk menyimpan folder blog yang berasal dari yii
+misal c:\xampp\htdocs\sem6\TugasPKL
+4. Kemudian copy kan nama folder penyimpanan yiic.php berada, yaitu pada C:\xampp\htdocs\yii\framework\yiic.php 
+5. letakkan pada cmd, diawali dengan php kemudian diikuti dengan nama folde penyimpanan yiic berada, lalu diikuti dengan webapp sebagai default dari yii , lalu nama folder yang diperlukan , yaitu blog
+maka program di cmd akan berbentuk sebagai berikut :
+c:\xampp\htdocs\sem6\TugasPKL>php C:\xampp\htdocs\yii\framework\yiic.php webapp blog
+6.Maka akan muncul perintah Create a Web application under 'C:\xampp\htdocs\sem6\TugasPKL\blog'? (yes|no) [no]:
+lalu ketikkan yes, maka folder blog dari yii akan di generate pada folder C:\xampp\htdocs\sem6\TugasPKL
+7. setelah selesai di generate, maka akan muncul perintah :
+Your application has been created successfully under C:\xampp\htdocs\sem6\TugasPKL\blog.
+8. buka yii pada browser melalui http://localhost/sem6/TugasPKL/blog
+9. Maka yii sudah terinstal di laptop kita
+
+
+Bagaimana konsep yii?
+Ada di protected, terdapat controller,model,dan view
+tampilan dan bisnis proses dipisah pada yii
+pada view /site/index
+
+pada sitecontroller bisa melakukan bisnis proses , cth if then else
+kemudian bisa dipanggil view yang akan menunjukkan tampilan program
+"Tampilan dan bisnis proses diubah"
+
+POLANYA DARI CONTROLLER KE VIEW
+
+Jika membuat database harus mempunyai database
+cara mensetting database nya melalui protected/config/main
+1. Aktifkan komentar gii, merupakan generator, beri password 
+2. Beri komentar/non aktifkan pada database sql lite
+3. kemudian aktifkan koneksi mysql ,pada dbname sesuaikan dengan nama database yang digunakan
+
+untuk mengakses generator gii menggunakan http://localhost/sem6/TugasPKL/blog/index.php?r=gii
+lalu kita diminta untuk memasukkan password gii yang berada di config/main bagian gii , yaitu 1234
+kemudian setelah berhasil login maka akan menampilkan :
+-Controller Generator
+-Crud Generator
+-Form Generator
+-Model Generator
+-Module Generator
+
+1. Generate model, lalu masukkan nama tabel , maka akan otomatis membuat model baru
+sesuai dengan tabel yang dibuat, lalu klik preview, maka dia akan membaca database dan men-generate tabel beserta field tabel secara langsung. ceklis pada build relations dan use column comments as attribute labels, kemudian klik generate
+Maka di folder protected/models akan terbentuk 1 model sesuai dengan nama tabel yang telah dibuat sebelumnya.
+
+2. Generate crud, masukkan nama model yang telah dibuat sebelumnya lalu klik preview. Maka akan men-generate 1 buah controller dan 1 buah view, lalu klik generate. kemudian klik try it now
